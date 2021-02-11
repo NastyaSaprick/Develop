@@ -549,8 +549,9 @@ a{
     .section-reviews{
         padding: 50px 0;
     }
-    .cards__image{
+    .cards__image , .cards-block__box , ..cards-block__box--home {
         max-width: 300px;
+        height: 300px;
     }
     .opportunities{
         justify-content: center;
