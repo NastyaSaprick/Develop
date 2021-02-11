@@ -59,6 +59,17 @@ a{
     color: #FFFFFF;
     font-size: 18px;
 }
+/*анимация к кнопке*/
+.button-link:hover{
+    animation-name: button__activ;
+    animation-duration: 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes button__activ{
+    to{
+        background: linear-gradient(25deg, #10c9c3, #e288de);
+    }
+}
         /*index.html*/
 /*header*/
 .header{
@@ -74,7 +85,7 @@ a{
     font-weight: 600;
 }
    /*анимация*/
-.link--active:hover{
+.link--active:hover , .nav-menu__link:hover{
     animation-name: link--active__activ;
     animation-duration: 0s;
     animation-fill-mode: forwards;
@@ -190,17 +201,30 @@ a{
     background: #F5F5F5;
 }
 .cards-block__card{
+    justify-content: center;
     align-items: center;
     padding: 47px 0;
-}
-.cards__image{
-    padding-bottom: 30px;
 }
 .cards-block__info__text{
     text-transform: uppercase;
     color: #8E8E8E;
     font-weight: 600;
     padding-bottom: 45px;
+}
+/*эффект активности*/
+.cards-block__box{
+    position: relative;
+    height: 400px;
+}
+.cards-block__box:hover::after{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background:#141414 url(../img/blu/lookfffff.svg) no-repeat center / 48px;
+    opacity: 0.75;
 }
 
 /*Work-Process*/
@@ -474,9 +498,6 @@ a{
     .input:nth-child(1){
         margin-right: 0;
     }
-    .footer__nav-contact{
-        margin-left: 150px;
-    }
     .nav-menu{
         margin-top: 30px;
     }
@@ -510,7 +531,7 @@ a{
         align-items: flex-start;
         background: white;
     }
-    .header__nav-menu{
+    .header__nav-menu , .header__nav-menu-aboun{
         height: 100%;
         flex-direction: column;
         margin-bottom: 138px;
@@ -555,4 +576,111 @@ a{
     padding-bottom: 37px;
     max-width: 512px;
     color: #787878;
+}
+/*эффект активности*/
+.cards-block__box--home{
+    position: relative;
+    height: 400px;
+}
+.cards-block__box--home:hover::after{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background:#42a195 url(../img/blu/lookfffff.svg) no-repeat center / 48px;
+    opacity: 0.75;
+}
+
+          /*about.index*/
+/*about*/
+.header__nav-menu-aboun , .menu-burger-about{
+    max-width: 250px;
+}
+
+/*адоптация к выпадающему меню в aboutMe*/
+@media(max-width:560px){
+    /*выпадающее меню*/
+    
+    .header__nav-menu-aboun{
+        height: 100%;
+        flex-direction: column;
+        margin-bottom: 10px;
+        justify-content: flex-start;
+        align-items:flex-start;
+    }
+}
+
+/*AmeliaWoods*/
+.section-AmeliaWoods{
+    background:#3E3E3E;
+}
+.AmeliaWoods{
+    padding: 120px 0;
+}
+.AmeliaWoods__info__text{
+    max-width: 512px;
+}
+
+/*Project*/
+.Project__info{
+    padding: 102px 0;
+}
+.Project-text{
+    max-width: 537px;
+    padding-bottom: 37px;
+    color: #787878;
+}
+.Project__button{
+    padding: 15px 46px;
+}
+
+/*aboutMe*/
+.section-aboutMe{
+    background: #F5F5F5;
+}
+.aboutMe__img{
+    flex-basis: 50%;
+}
+.aboutMe__info{
+    flex-basis: 50%;
+    max-width: 454px;
+    align-items: flex-start;
+}
+.aboutMe-text{
+    color: #787878;
+    text-align: left;
+    padding-bottom: 37px;
+}
+/*адоптация к section-aboutMe*/
+@media(max-width:1200px){
+    .aboutMe{
+        justify-content: center;
+        align-items:center;
+    }
+}
+@media(max-width:768px){
+    .nav-menu{
+        max-width: none;
+        padding: 0 30px;
+    }
+    .footer__info{
+        display: none;
+    }
+}
+@media(max-width:560px){
+    .aboutMe__img{
+        display: none;
+    }
+    .aboutMe__info{
+        flex-basis: 100%;
+    }
+    .aboutMe__img-image {
+        width: 560px;
+    }
+    .nav-menu{
+        max-width: none;
+        padding: 0 40px;
+    }
 }
