@@ -817,6 +817,17 @@ a{
     }
 }
 
-
-
-
+       /*contacts*/
+.section-map{
+   margin: 97px 0;
+   background:url(../img/section-map/map.png) no-repeat center / cover;
+}
+.map-img{
+   padding-top: 705px;
+   padding-bottom: 255px; 
+   justify-content: center;
+   align-items:center;
+}
+.map-img__img{
+    max-width: 34px;
+}
