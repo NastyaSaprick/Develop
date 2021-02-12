@@ -1,3 +1,5 @@
+/*новый слайдер */
+
 /* Индекс слайда по умолчанию */
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -20,7 +22,7 @@ function currentSlide(n) {
 /* Основная функция слайдера */
 function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("item");
+    var slides = document.getElementsByClassName("item-project");
     var dots = document.getElementsByClassName("slider-dots_item");
     if (n > slides.length) {
       slideIndex = 1
@@ -34,7 +36,6 @@ function showSlides(n) {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex - 1].style.display = "flex";
     dots[slideIndex - 1].className += " active";
 }
-
